@@ -20,7 +20,7 @@ namespace NavShare
             bg.button.Add(new SingleViewButton { name = "新闻类", url = "http://weixingongzhonghao-1.apphb.com/sendnews.aspx" });
             var bg2 = new SubButton() { name = "更多类" };//二级菜单
             bg2.sub_button.Add(new SingleViewButton { name = "打开NavShareIndex", url = "http://weixingongzhonghao-1.apphb.com/NavShareIndex.aspx?s=system" });
-            bg2.sub_button.Add(new SingleViewButton { name = "点击分享", url = "http://weixingongzhonghao-1.apphb.com/ViewShare.aspx" });
+            bg2.sub_button.Add(new SingleViewButton { name = "分享记录", url = "http://weixingongzhonghao-1.apphb.com/ViewShare.aspx" });
             bg.button.Add(bg2);
             var r = Meun.CreateMenu(Wx.accessToken, bg);
             if (r.errcode == 0)

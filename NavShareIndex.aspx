@@ -10,12 +10,13 @@
 <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <%-- 微信JS接口 --%>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
 <style type="text/css">
 body
 {
 font-family : 微软雅黑,宋体;
-font-size : 30px;
-color : #f00;
+font-size : 20px;
+color : #0026ff;
 }
 </style>
 
@@ -30,39 +31,4 @@ color : #f00;
     </form>
 </body>
 </html>
-<script>
-    var url = location.href;
-    url = 'Share.aspx?url=' + url + '&u=<%=ViewState["u"]%>' + '&s=<%=ViewState["s"]%>';
-    //转发给朋友圈的回调函数，向后台传递转发记录
-    function friendCirclecallback(res) {        
-        //AJAX请求               
-        $.ajax({
-            type: "get",
-            url: url + "&type=timeline",
-            beforeSend: function () {
-            },
-            success: function () {                
-            },
-            complete: function () {
-            },
-            error: function () {                
-            }
-        });
-    };
-    //转发给朋友的回调函数，向后台传递转发记录
-    function friendcallback(res) {
-        //AJAX请求
-        $.ajax({
-            type: "get",
-            url: url + "&type=friend",
-            beforeSend: function () {
-            },
-            success: function () {                
-            },
-            complete: function () {
-            },
-            error: function () {                
-            }
-        });
-    };
-</script>
+
